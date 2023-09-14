@@ -329,3 +329,85 @@ for i in range(1, 51): # 1 ~ 50 이라는 수 (승객)
         print("[ ] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
 
 print("총 탑승 승객 : {0} 분".format(cnt))
+
+
+
+
+
+
+
+
+
+# 스터디 코드 연습
+
+# def solution(my_string, n):
+
+#     answer = ''
+#     for i in my_string:
+#         answer += i * n
+#     return answer
+
+# print(solution)
+
+
+# name = '강민석'
+# new_name = ''
+# for char in name:
+#     new_name += char * 3
+# print(new_name)
+
+
+
+# 문제 1
+from random import *
+lotto = []
+
+# 아래에 코딩하세요
+# 1. for문 or while문 반드시 사용하기
+# 2. randint() 활용하기
+
+# 랜덤 로또 번호 출력
+print(lotto)
+
+# 정답 1
+import random
+lotto = []
+
+while len(lotto) < 6: # lotto 원소 수가 6개가 될 때까지 반복
+    num = random.randint(1,45) # 1부터 45까지 정수 랜덤 추출
+    if num not in lotto: # 중복이 되지 않도록
+        lotto.append(num) # 추출된 랜덤 정수값을 리스트에 저장
+
+print(lotto)
+
+
+# 문제 2
+my_lotto = [13,23,33,43,44,45] # 내가 선택한 로또 번호
+lotto # 당첨 번호
+
+# 두 리스트를 비교해서 3개 숫자 이상 겹치면 당첨
+
+# 아래에 코딩하세요
+# 1. set 자료형 활용하기
+# 2. while문, break 활용하기
+
+# 출력 예시
+# 1개 : 낙첨
+# 3개 : 당첨
+
+# 정답 2
+my_lotto = [13,23,33,43,44,45]
+
+while True:
+    lotto = []
+
+    while len(lotto) < 6:
+        num = random.randint(1,45)
+        if num not in lotto: # 중복 안되게
+            lotto.append(num)
+
+    if len(set(lotto).intersection(my_lotto)) >= 3:
+        print(f"{len(set(lotto).intersection(my_lotto))}개 : 당첨")
+        break
+    else:
+        print(f"{len(set(lotto).intersection(my_lotto))}개 : 낙첨")
