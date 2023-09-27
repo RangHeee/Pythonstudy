@@ -41,22 +41,29 @@ print(R)
 # 사용자로 부터 5자리 우편번호를 입력받고 구를 판별하라.
 
 # pust_num = input("우편번호 : ")
-우편번호 = input("우편번호: ")
-우편번호 = 우편번호[:3]
-if 우편번호 in ["010", "011", "012"]:
-    print("강북구")
-elif 우편번호 in ["014", "015", "016"]:
-    print("도봉구")
-else:
-    print("노원구")
+# 우편번호 = input("우편번호: ")
+# 우편번호 = 우편번호[:3]
+# if 우편번호 in ["010", "011", "012"]:
+#     print("강북구")
+# elif 우편번호 in ["014", "015", "016"]:
+#     print("도봉구")
+# else:
+#     print("노원구")
 
 
 # 예제 190
 # 리스트에 저장된 데이터를 아래와 같이 출력하라.
 apart = [ [101, 102], [201, 202], [301, 302] ]
 
-def ho([101, 102], [201, 202], [301, 302]):
-    apart
+def hamsu(apart):
+    for floor in apart:
+        for ho in floor:
+            print(ho, "호")
+    print("-" * 5)
+
+hamsu(apart)
+
+print(apart[1][0])
     
 
 # 예제 210
@@ -79,3 +86,11 @@ message3()
 # - 생성자 및 다양한 메서드 추가
 # 2. 여러 객체를 생성하기
 # 3. 1번에서 정의한 클래스를 상속받는 새로운 클래스를 정의해보기
+
+class marble:
+    def __init__(self, name, num1, num2)
+        self.name = name
+        self.num1 = num1
+        self.num2 = num2
+        print("{0} player가 {1}, {2}를 출력했습니다.".format(self.name, self.num1, self.num2))
+
