@@ -87,10 +87,67 @@ message3()
 # 2. 여러 객체를 생성하기
 # 3. 1번에서 정의한 클래스를 상속받는 새로운 클래스를 정의해보기
 
+from random import *
+
 class marble:
-    def __init__(self, name, num1, num2)
+    def __init__(self, name, num1, num2):
         self.name = name
         self.num1 = num1
         self.num2 = num2
         print("{0} player가 {1}, {2}를 출력했습니다.".format(self.name, self.num1, self.num2))
 
+player1 = marble("랑희", 1, 3)
+
+
+
+
+
+# 코딩도장 추천 많은 Lv1 문제
+# Multiples of 3 and 5
+# 10미만의 자연수에서 3과 5의 배수를 구하면 3,5,6,9이다. 이들의 총합은 23이다.
+# 1000미만의 자연수에서 3,5의 배수의 총합을 구하라.
+
+
+
+# 1~1000에서 각 수의 개수 구하기
+# 예로 10 ~ 15 까지의 각 숫자의 개수를 구해보자
+
+# 10 = 1, 0
+# 11 = 1, 1
+# 12 = 1, 2
+# 13 = 1, 3
+# 14 = 1, 4
+# 15 = 1, 5
+
+# 그러므로 이 경우의 답은 0:1개, 1:7개, 2:1개, 3:1개, 4:1개, 5:1개
+
+
+
+
+# 예제 297 예외처리 및 리스트에 저장
+# 문자열로 표현된 PER 값을 실수로 변환한 후 이를 새로운 리스트에 저장해보세요.
+per = ["10.31", "", "8.00"]
+
+for i in per:
+    print(float(per))
+
+
+# 예제 300 try, except, else, finally 구조 사용해보기
+# 파이썬 예외처리는 다음과 같은 구조를 가질 수 있습니다.
+
+# try:
+#     실행 코드
+# except:
+#     예외가 발생했을 때 수행할 코드
+# else:
+#     예외가 발생하지 않았을 때 수행할 코드
+# finally:
+#     예외 발생 여부와 상관없이 항상 수행할 코드
+
+# 아래의 코드에 대해서 예외처리를 사용하고 try, except, else, finally에 적당한 코드를 작성해봅시다.
+# else와 finally는 적당한 문구를 print하시면 됩니다.
+
+per = ["10.31", "", "8.00"]
+
+for i in per:
+    print(float(per))

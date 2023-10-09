@@ -569,7 +569,7 @@ for unit in attack_units:
 game_over()
 
 
-#퀴즈 9
+#퀴즈 8
 # Quiz) 주어진 코드를 활용하여 부동산 프로그램을 작성하시오.
 
 # (출력 예제)
