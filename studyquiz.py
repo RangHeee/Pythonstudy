@@ -107,6 +107,23 @@ player1 = marble("랑희", 1, 3)
 # 10미만의 자연수에서 3과 5의 배수를 구하면 3,5,6,9이다. 이들의 총합은 23이다.
 # 1000미만의 자연수에서 3,5의 배수의 총합을 구하라.
 
+# [정답]
+result = 0
+for n in range(1, 1000):
+    if n % 3 == 0:
+        result += n
+    if n % 5 == 0:
+        result += n
+print(result)
+
+
+# [정답 2]
+sum = 0
+for i in range(1,1000):
+    if i%3==0 or i%5==0:
+        sum+=i
+print(sum)
+
 
 
 # 1~1000에서 각 수의 개수 구하기
@@ -121,15 +138,39 @@ player1 = marble("랑희", 1, 3)
 
 # 그러므로 이 경우의 답은 0:1개, 1:7개, 2:1개, 3:1개, 4:1개, 5:1개
 
+# [정답]
+num_list =[]
+
+for str_num in str(range(1,1001)):
+    num_list.append(str_num)
+
+for i in range(0,10):
+    print(i, ':', num_list.count(str(i)))
+
 
 
 
 # 예제 297 예외처리 및 리스트에 저장
 # 문자열로 표현된 PER 값을 실수로 변환한 후 이를 새로운 리스트에 저장해보세요.
+# per = ["10.31", "", "8.00"]
+
+# for i in per:
+#     print(float(per))
+
+
+# [정답]
 per = ["10.31", "", "8.00"]
+new_per = []
 
 for i in per:
-    print(float(per))
+    try:
+        v = float(i)
+    except:
+        v = 0
+    new_per.append(v)
+
+print(new_per)
+
 
 
 # 예제 300 try, except, else, finally 구조 사용해보기
@@ -147,7 +188,21 @@ for i in per:
 # 아래의 코드에 대해서 예외처리를 사용하고 try, except, else, finally에 적당한 코드를 작성해봅시다.
 # else와 finally는 적당한 문구를 print하시면 됩니다.
 
+# per = ["10.31", "", "8.00"]
+
+# for i in per:
+#     print(float(per))
+
+
+# [정답]
 per = ["10.31", "", "8.00"]
 
 for i in per:
-    print(float(per))
+    try:
+        print(float(i))
+    except:
+        print(0)
+    else:
+        print("clean data")
+    finally:
+        print("변환 완료")
