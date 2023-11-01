@@ -70,7 +70,7 @@
  [],
  False,
  False,
- 1698775679,
+ 1698817210,
  [('run.exe',
    'C:\\Users\\박랑희\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],
