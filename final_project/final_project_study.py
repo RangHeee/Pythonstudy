@@ -1,7 +1,12 @@
 import random # random 모듈 생성
 
 def generate_secret_code(): # generate_secret_code 함수는 0부터 9까지의 난수로 이루어진 4자리의 비밀 코드를 생성
-    return [random.randint(0, 9) for _ in range(4)] # 'random.randint(0, 9)'는 0부터 9까지의 랜덤한 정수를 생성하는 함수 / 이를 4번 반복하여 리스트를 생성
+    # 중복되지 않는 4자리 숫자로 이루어진 리스트를 생성
+    secret_code = random.sample(range(10), 4)
+    return secret_code
+
+# def generate_secret_code(): # generate_secret_code 함수는 0부터 9까지의 난수로 이루어진 4자리의 비밀 코드를 생성
+#     return [random.randint(0, 9) for _ in range(4)] # 'random.randint(0, 9)'는 0부터 9까지의 랜덤한 정수를 생성하는 함수 / 이를 4번 반복하여 리스트를 생성
 
 def get_user_guess(): # get_user_guess 함수는 사용자로부터 4자리의 숫자를 입력받음.
     while True:
